@@ -4,6 +4,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Clock, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { asset } from "@/lib/site";
 
 const newsItems = [
   {
@@ -91,7 +92,7 @@ export default function PressReleasesNews() {
                 {/* Thumbnail */}
                 <div className="relative h-60 w-full overflow-hidden bg-gray-100">
                   <Image
-                    src={item.image}
+                    src={asset(item.image)}
                     alt={item.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-500"

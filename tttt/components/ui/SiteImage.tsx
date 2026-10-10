@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/site";
 
 type Props = {
   src: string;
@@ -22,9 +23,10 @@ export default function SiteImage({
   unoptimized,
 }: Props) {
   const isSvg = typeof src === "string" && src.toLowerCase().includes(".svg");
+  const resolved = asset(src || "/images/placeholder.svg");
   return (
     <Image
-      src={src || "/images/placeholder.svg"}
+      src={resolved}
       alt={alt}
       fill
       sizes={sizes}

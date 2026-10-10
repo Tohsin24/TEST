@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/site";
 import { CircleCheck as CheckCircle2, BriefcaseBusiness, Shield, Lightbulb, Handshake, TrendingUp } from "lucide-react";
 
 const reasons = [
@@ -83,7 +84,7 @@ export default function WhyChooseUs() {
             {/* Operational Facility Showcase Image */}
             <div className="relative h-72 w-full rounded-3xl overflow-hidden shadow-xl border border-gray-100 group">
               <Image
-                src="/assets/hero/hero-refinery.jpg"
+                src={asset("/assets/hero/hero-refinery.jpg")}
                 alt="Neweraplus Engineering and Operations"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { asset } from "@/lib/site";
 import Story from "@/components/about/Story";
 import VisionMission from "@/components/about/VisionMission";
 import CoreValues from "@/components/about/CoreValues";
@@ -20,7 +21,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden py-32 bg-[#0b132b]">
         <div className="absolute inset-0">
           <Image
-            src="/assets/hero/hero-infrastructure.jpg"
+            src={asset("/assets/hero/hero-infrastructure.jpg")}
             alt="About Neweraplus Group"
             fill
             priority

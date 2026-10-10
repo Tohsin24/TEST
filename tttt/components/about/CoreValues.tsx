@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { asset } from "@/lib/site";
 import {
   ShieldCheck,
   Award,
@@ -88,7 +89,7 @@ export default function CoreValues() {
           {/* 6th Slot - Visual Commitment Showcase Card */}
           <div className="relative overflow-hidden rounded-3xl min-h-[300px] flex flex-col justify-end p-8 text-white group shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border border-gray-100">
             <Image
-              src="/assets/hero/hero-sustainability.png"
+              src={asset("/assets/hero/hero-sustainability.png")}
               alt="Sustainability and Quality Commitment"
               fill
               className="object-cover group-hover:scale-105 transition-transform duration-700"

@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { asset } from "@/lib/site";
 
 interface Slide {
   bgSrc: string;
@@ -101,7 +102,7 @@ export default function HeroSlider() {
           >
             <div className="relative w-full h-full">
               <Image
-                src={s.bgSrc}
+                src={asset(s.bgSrc)}
                 alt="Neweraplus Group Hero"
                 fill
                 priority={idx === 0}

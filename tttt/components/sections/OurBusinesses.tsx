@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import { asset } from "@/lib/site";
 
 const businesses = [
   {
@@ -70,7 +71,7 @@ export default function OurBusinesses() {
               <div>
                 <div className="relative h-60 w-full bg-zinc-900 overflow-hidden">
                   <Image
-                    src={biz.image}
+                    src={asset(biz.image)}
                     alt={biz.title}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90 group-hover:opacity-100"

@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
+import { asset } from "@/lib/site";
 
 export default function AboutCTA() {
   return (
     <section className="relative overflow-hidden py-28 bg-[#0b132b]">
       <div className="absolute inset-0">
         <Image
-          src="/assets/hero/hero-refinery.jpg"
+          src={asset("/assets/hero/hero-refinery.jpg")}
           alt="Partner with Neweraplus Group"
           fill
           className="object-cover object-center opacity-30"

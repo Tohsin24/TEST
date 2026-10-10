@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { Mail, MapPin, Phone, Clock, Building2, Wrench, Fuel } from "lucide-react";
 import ContactForm from "@/components/contact/ContactForm";
+import { asset } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -44,7 +45,7 @@ export default function ContactPage() {
       <section className="relative overflow-hidden py-32 bg-[#0b132b]">
         <div className="absolute inset-0">
           <Image
-            src="/assets/hero/hero-infrastructure.jpg"
+            src={asset("/assets/hero/hero-infrastructure.jpg")}
             alt="Contact Neweraplus Group"
             fill
             priority
@@ -155,7 +156,7 @@ export default function ContactPage() {
             {/* Operational Facility Showcase Image Card in Vacant Space */}
             <div className="mt-10 relative h-72 w-full rounded-3xl overflow-hidden shadow-xl border border-gray-100 group">
               <Image
-                src="/assets/hero/hero-ipo.png"
+                src={asset("/assets/hero/hero-ipo.png")}
                 alt="Neweraplus Corporate Operational Headquarters"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -216,7 +217,7 @@ export default function ContactPage() {
                 >
                   <div className="relative h-56 w-full bg-zinc-900 overflow-hidden">
                     <Image
-                      src={center.image}
+                      src={asset(center.image)}
                       alt={center.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-700"

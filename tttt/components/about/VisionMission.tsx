@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Eye, Target } from "lucide-react";
+import { asset } from "@/lib/site";
 
 export default function VisionMission() {
   return (
@@ -28,7 +29,7 @@ export default function VisionMission() {
           <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200 flex flex-col group hover:shadow-xl transition-all duration-300">
             <div className="relative h-56 w-full bg-zinc-900 overflow-hidden">
               <Image
-                src="/assets/hero/hero-polypropylene.jpg"
+                src={asset("/assets/hero/hero-polypropylene.jpg")}
                 alt="Neweraplus Vision"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
@@ -58,7 +59,7 @@ export default function VisionMission() {
           <div className="bg-white rounded-2xl overflow-hidden shadow-md border border-gray-200 flex flex-col group hover:shadow-xl transition-all duration-300">
             <div className="relative h-56 w-full bg-zinc-900 overflow-hidden">
               <Image
-                src="/assets/hero/hero-sustainability.png"
+                src={asset("/assets/hero/hero-sustainability.png")}
                 alt="Neweraplus Mission"
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-700"
